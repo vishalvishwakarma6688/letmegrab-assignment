@@ -37,6 +37,7 @@ const Signup = () => {
                 {/* Username */}
                 <input
                     type="text"
+                    required
                     placeholder="Username"
                     className="w-full mb-4 px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                     onChange={(e)=> setForm({...form, username: e.target.value})}
@@ -45,6 +46,7 @@ const Signup = () => {
                 {/* Email */}
                 <input
                     type="email"
+                    required
                     placeholder="Email"
                     className="w-full mb-4 px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                     onChange={(e)=> setForm({...form, email: e.target.value})}
@@ -53,6 +55,7 @@ const Signup = () => {
                 {/* Password */}
                 <input
                     type="password"
+                    required
                     placeholder="Password"
                     className="w-full mb-4 px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                     onChange={(e)=> setForm({...form, password: e.target.value})}
@@ -61,6 +64,7 @@ const Signup = () => {
                 {/* Confirm */}
                 <input
                     type="password"
+                    required
                     placeholder="Confirm Password"
                     className="w-full mb-6 px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                     onChange={(e)=> setForm({...form, confirm: e.target.value})}

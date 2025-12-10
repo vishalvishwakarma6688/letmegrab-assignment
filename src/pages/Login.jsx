@@ -21,8 +21,8 @@ const Login = () => {
                 <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">
                     Login to Your Account
                 </h2>
-                <input className="w-full mb-4 px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" type="text" placeholder='Username' onChange={(e) => setForm({ ...form, username: e.target.value })} />
-                <input className="w-full mb-4 px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" type="password" placeholder='Ente Password' onChange={(e) => setForm({ ...form, password: e.target.value })} />
+                <input required className="w-full mb-4 px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" type="text" placeholder='Username' onChange={(e) => setForm({ ...form, username: e.target.value })} />
+                <input required className="w-full mb-4 px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" type="password" placeholder='Ente Password' onChange={(e) => setForm({ ...form, password: e.target.value })} />
                 <button
                     type="submit"
                     className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 rounded-md"
