@@ -33,8 +33,6 @@ const Signup = () => {
                 <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">
                     Create Account
                 </h2>
-
-                {/* Username */}
                 <input
                     type="text"
                     required

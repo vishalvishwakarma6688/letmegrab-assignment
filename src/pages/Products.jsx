@@ -53,45 +53,45 @@ const Products = () => {
                 <tbody>
                     {filtered.length === 0 ? "No Data Found" : (
                         filtered.map(product => (
-                        <tr key={product.id} className="border-b border-slate-200">
-                            <td className="py-2 px-3">{product.title}</td>
-                            <td className="py-2 px-3 font-medium">${product.price}</td>
-                            <td className="py-2 px-3 text-slate-700">
-                                {product.description.slice(0, 50)}...
-                            </td>
+                            <tr key={product.id} className="border-b border-slate-200">
+                                <td className="py-2 px-3">{product.title}</td>
+                                <td className="py-2 px-3 font-medium">${product.price}</td>
+                                <td className="py-2 px-3 text-slate-700">
+                                    {product.description.slice(0, 50)}...
+                                </td>
 
-                            {/* Actions */}
-                            <td className="py-2 px-3 flex gap-2">
-                                
-                                <button
-                                    onClick={() => setSelectedProduct(product)}
-                                    className="px-3 cursor-pointer py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm"
-                                >
-                                    View
-                                </button>
+                                {/* Actions */}
+                                <td className="py-2 px-3 flex gap-2">
 
-                                <button
-                                    onClick={() => console.log("Update", product)}
-                                    className="px-3 cursor-pointer py-1 bg-yellow-500 hover:bg-yellow-600 text-white rounded-md text-sm"
-                                >
-                                    Update
-                                </button>
+                                    <button
+                                        onClick={() => setSelectedProduct(product)}
+                                        className="px-3 cursor-pointer py-1 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm"
+                                    >
+                                        View
+                                    </button>
 
-                                <button
-                                    onClick={() => deleteProduct(product.id)}
-                                    className="px-3 cursor-pointer py-1 bg-red-600 hover:bg-red-700 text-white rounded-md text-sm"
-                                >
-                                    Delete
-                                </button>
+                                    <button
+                                        onClick={() => console.log("Update", product)}
+                                        className="px-3 cursor-pointer py-1 bg-yellow-500 hover:bg-yellow-600 text-white rounded-md text-sm"
+                                    >
+                                        Update
+                                    </button>
 
-                            </td>
-                        </tr>
-                    ))
+                                    <button
+                                        onClick={() => deleteProduct(product.id)}
+                                        className="px-3 cursor-pointer py-1 bg-red-600 hover:bg-red-700 text-white rounded-md text-sm"
+                                    >
+                                        Delete
+                                    </button>
+
+                                </td>
+                            </tr>
+                        ))
                     )}
                 </tbody>
             </table>
             {selectedProduct && (
-                <ModalView product={selectedProduct} onClose={()=> setSelectedProduct(null)}/>
+                <ModalView product={selectedProduct} onClose={() => setSelectedProduct(null)} />
             )}
         </div>
     )
